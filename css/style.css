@@ -3,7 +3,7 @@
 section {
     padding-top: 30px;
     padding-bottom: 30px;
-    background-image: url(../img/white-stripe-repeat-bg.jpg);
+    background-image: url('../img/white-stripe-repeat-bg.jpg');
 }
 
 section:nth-child(2n) {
@@ -67,10 +67,10 @@ header.jumbotron {
     padding-top: 100px;
     padding-bottom: 100px;
     margin-bottom: 0;
-    background-image: url(../img/header-bg.jpg);
+    background-image: url('../img/header-bg.jpg');
     -webkit-background-size: cover;
     background-size: cover;
-    background-size: no-repeat;
+    background-repeat: no-repeat;
     position: relative;
 }
 
@@ -83,6 +83,11 @@ header.jumbotron:after {
     top: 0;
     background-color: rgba(0, 0, 0, .5);
     z-index: 1;
+    transition: all .5s ease;
+}
+
+header.jumbotron.scroll:after {
+    background-color: rgba(0, 0, 0, .1);
 }
 
 .jumbotron-content {
@@ -109,14 +114,14 @@ header.jumbotron h1 {
     padding-bottom: 10px;
 }
 
+#subscribeSection * {
+    color: white;
+}
+
 #subscribeSection .btn {
     height: 50px;
     font-size: 22px;
     letter-spacing: 2px;
-}
-
-#subscribeSection * {
-    color: white;
 }
 
 
@@ -126,7 +131,7 @@ header.jumbotron h1 {
     font-size: 40px;
     display: block;
     text-align: center;
-    color: #123e84
+    color: #253746;
 }
 
 .feature,
@@ -138,7 +143,7 @@ header.jumbotron h1 {
     font-size: 20px;
     display: block;
     text-align: center;
-    color: #123e84
+    color: #253746;
 }
 
 .secondary-feature>h5 {
@@ -160,6 +165,31 @@ header.jumbotron h1 {
     padding-bottom: 0;
 }
 
+#portfolioSection {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+#slideshow .item {
+    height: 270px;
+}
+
+.carousel-control.left,
+.carousel-control.right {
+    background-image: none;
+}
+
+@media screen and (max-width: 767px) {
+    #slideshow .item {
+        height: 500px;
+    }
+    #slideshow .item img {
+        width: 120px;
+        height: 120px;
+        margin: 0 auto;
+    }
+}
+
 .photo {
     height: 250px;
     text-align: center;
@@ -167,8 +197,9 @@ header.jumbotron h1 {
     background-size: cover;
     background-repeat: no-repeat;
     padding-left: 0;
-    padding-top: 0;
-    filter: grayscale(100);
+    padding-right: 0;
+    filter: grayscale(100%);
+    transition: all .5s ease;
 }
 
 .photo h3 {
@@ -185,7 +216,7 @@ header.jumbotron h1 {
 }
 
 .photo:hover {
-    filter: grayscale(1)
+    filter: grayscale(0%);
 }
 
 .photo:hover h3 {
@@ -194,35 +225,35 @@ header.jumbotron h1 {
 }
 
 #photo-1 {
-    background-image: url(../img/portfolio-1.jpg);
+    background-image: url('../img/portfolio-1.jpg');
 }
 
 #photo-2 {
-    background-image: url(../img/portfolio-2.jpg);
+    background-image: url('../img/portfolio-2.jpg');
 }
 
 #photo-3 {
-    background-image: url(../img/portfolio-3.jpg);
+    background-image: url('../img/portfolio-3.jpg');
 }
 
 #photo-4 {
-    background-image: url(../img/portfolio-4.jpg);
+    background-image: url('../img/portfolio-4.jpg');
 }
 
 #photo-5 {
-    background-image: url(../img/portfolio-5.jpg);
+    background-image: url('../img/portfolio-5.jpg');
 }
 
 #photo-6 {
-    background-image: url(../img/portfolio-6.jpg);
+    background-image: url('../img/portfolio-6.jpg');
 }
 
 #photo-7 {
-    background-image: url(../img/portfolio-7.jpg);
+    background-image: url('../img/portfolio-7.jpg');
 }
 
 #photo-8 {
-    background-image: url(../img/portfolio-8.jpg);
+    background-image: url('../img/portfolio-8.jpg');
 }
 
 
@@ -230,3 +261,84 @@ header.jumbotron h1 {
 
 
 /* note footer */
+
+footer {
+    padding-top: 30px;
+    background-color: #314858;
+    color: white;
+    text-align: center;
+}
+
+footer * {
+    color: white;
+}
+
+.footer-bar {
+    width: 100%;
+    height: 50px;
+    background-color: #22262c;
+}
+
+.footer-bar ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.footer-bar ul>li {
+    float: left;
+    line-height: 50px;
+    margin-right: 10px;
+}
+
+.footer-bar p {
+    float: right;
+    line-height: 50px;
+    margin: 0;
+}
+
+.social-links a {
+    background-color: rgba(255, 255, 255, 0.3);
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right: 8px;
+    text-align: center;
+}
+
+.social-links a:hover {
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.social-links a>i.fa:before {
+    color: #314858;
+    line-height: 40px;
+}
+
+#scrollTopBtn {
+    width: 70px;
+    height: 70px;
+    background-color: #2462aa;
+    text-align: center;
+    line-height: 70px;
+    color: white;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 35px;
+    right: 35px;
+    display: none;
+    /* 為了讓網頁卷至500的時候再顯示 */
+}
+
+#scrollTopBtn.scroll {
+    display: block;
+}
+
+#scrollTopBtn:hover,
+#scrollTopBtn:focus {
+    text-decoration: none;
+    outline: none;
+}

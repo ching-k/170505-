@@ -11,19 +11,55 @@
     <!-- font-awesome -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     <link rel="stylesheet" href="css/basic.css">
     <link rel="stylesheet" href="css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- wow.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
     <script src="js/main.js"></script>
 
 
     <title>Website Demo</title>
 </head>
+<!-- data-offset填入.navbar的高度 -->
 
-<body>
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
     <!-- note nav -->
+    <!--導覽列開始-->
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- 導覽列 RWD選單圖示與品牌連結 -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-navbar">
+                    <span class="sr-only">觸發縮放</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Brand</a>
+            </div>
+            <!-- 導覽列選項 與導覽列中的表單元素 -->
+            <!-- 小螢幕時要被收起的元素 放置於 navbar-collapse -->
+            <div class="collapse navbar-collapse" id="main-navbar">
+
+                <!-- 拉到右邊的導覽列清單 -->
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#subscribeSection">Subscribe</a></li>
+                    <li><a href="#featureSection">Features</a></li>
+                    <li><a href="#introduceSection">Introduce</a></li>
+                    <li><a href="#portfolioSection">Portfolio</a></li>
+                    <li><a href="#userReviewSection">Reviews</a></li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+    <!--導覽列結束-->
     <!-- note header -->
     <header id="header" class="jumbotron">
         <div class="jumbotron-content">
@@ -44,8 +80,6 @@
                 </div>
             </div>
         </div>
-
-
     </section>
     <!-- todo subscribe modal -->
     <!-- note featureSection -->
@@ -57,12 +91,12 @@
         <div class="container">
             <div class="row main-features">
                 <div class="col-sm-4 feature">
-                    <i class="fa fa-paper-plane" aria-hidden="true"></i>
+                    <i class="wow bounceIn fa fa-paper-plane" aria-hidden="true"></i>
                     <h3>Fast Deploy</h3>
                     <p>We'll deploy our service with shortest time.</p>
                 </div>
                 <div class="col-sm-4 feature">
-                    <i class="fa fa-briefcase" aria-hidden="true"></i>
+                    <i class="wow swing fa fa-briefcase" aria-hidden="true"></i>
                     <h3>Always Ready</h3>
                     <p>Everythings is setup ready, just waiting for your order.</p>
                 </div>
@@ -72,38 +106,35 @@
                     <p>Our software &amp; hardware service is always standby.</p>
                 </div>
             </div>
+
             <!-- note secondary-features -->
             <div class="row secondary-features">
-                <div class="col-xs-6 col-sm-4 col-md-2 secondary-feature">
+                <div class="col-md-2 col-sm-4 col-xs-6 secondary-feature">
                     <i class="fa fa-tree" aria-hidden="true"></i>
                     <h5>Cozy Office</h5>
                 </div>
-                <div class="col-xs-6 col-sm-4 col-md-2 secondary-feature">
+                <div class="col-md-2 col-sm-4 col-xs-6 secondary-feature">
                     <i class="fa fa-coffee" aria-hidden="true"></i>
                     <h5>Free coffee bar</h5>
                 </div>
-                <div class="col-xs-6 col-sm-4 col-md-2 secondary-feature">
+                <div class="col-md-2 col-sm-4 col-xs-6 secondary-feature">
                     <i class="fa fa-id-card-o" aria-hidden="true"></i>
                     <h5>Profesional Team</h5>
                 </div>
-                <div class="col-xs-6 col-sm-4 col-md-2 secondary-feature">
+                <div class="col-md-2 col-sm-4 col-xs-6 secondary-feature">
                     <i class="fa fa-language" aria-hidden="true"></i>
                     <h5>Linguist</h5>
                 </div>
-                <div class="col-xs-6 col-sm-4 col-md-2 secondary-feature">
+                <div class="col-md-2 col-sm-4 col-xs-6 secondary-feature">
                     <i class="fa fa-rocket" aria-hidden="true"></i>
                     <h5>Hackers Spirit</h5>
                 </div>
-                <div class="col-xs-6 col-sm-4 col-md-2 secondary-feature">
+                <div class="col-md-2 col-sm-4 col-xs-6 secondary-feature">
                     <i class="fa fa-graduation-cap" aria-hidden="true"></i>
                     <h5>Self-Learning</h5>
                 </div>
             </div>
         </div>
-
-
-
-
     </section>
     <!-- note introduceSection -->
     <section id="introduceSection">
@@ -122,11 +153,9 @@
                     <h3>Less is More</h3>
                     <p>We always keep our bussiness and products simple. So it will always be easy to learn and use. Our goal is making it simple but effective. Even though it might be the first time to use that kinds of product, we'll try to make sure every steps will be clear to understand for you. If needs any helps, our technical support team will be always standing by <a href="#">here</a>.</p>
                     <!-- todo add a youtube video -->
-
                 </div>
             </div>
         </div>
-
     </section>
     <!-- note portfolioSection -->
     <section id="portfolioSection">
@@ -161,29 +190,51 @@
     <section id="userReviewSection">
         <h1 class="section-title">Here is our customers said</h1>
         <h2 class="sub-section-title">All of our customers are the partners in our mission</h2>
-        <div class="row user-review">
-            <div class="col-sm-2 col-sm-offset-2">
-                <img class="img-responsive img-circle" src="img/row user-review-photo-Howard-Hamlin.jpg" alt="">
-            </div>
-            <div class="col-sm-6">
-                <h3 class="title">HHM Co-Founder</h3>
-                <h4 class="name">Howard Hamlin</h4>
-                <p>It's definitely the best time saving tools we have purchased in the very long time. It's awesome, really. I can't say enough about how well it's tailored to the needs of their product solutions. Our team has been using tools developed by other companies for 5 years before I choose this one, I will said it better than the others.</p>
-            </div>
 
+        <!--輪播開始-->
+        <div id="slideshow" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner" role="listbox">
+                <!--輪播圖片或內容-->
+                <div class="item active">
+                    <div class="row user-review">
+                        <div class="col-sm-2 col-sm-offset-2">
+                            <img class="img-responsive img-circle" src="img/user-review-photo-Howard-Hamlin.jpg" alt="">
+                        </div>
+                        <div class="col-sm-6">
+                            <h3 class="title">HHM Co-Founder</h3>
+                            <h4 class="name">Howard Hamlin</h4>
+                            <p>It's definitely the best time saving tools we have purchased in the very long time. It's awesome, really. I can't say enough about how well it's tailored to the needs of their product solutions. Our team has been using tools developed by other companies for 5 years before I choose this one, I will said it better than the others.</p>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- 第一頁 -->
+
+                <div class="item">
+                    <div class="row user-review">
+                        <div class="col-sm-2 col-sm-offset-2">
+                            <img class="img-responsive img-circle" src="img/user-review-photo-Gustavo-Fring.jpg" alt="">
+                        </div>
+                        <div class="col-sm-6">
+                            <h3 class="title">Owner of Los Pollos Hermanos</h3>
+                            <h4 class="name">Gustavo Fring</h4>
+                            <p>On an everyday basis, They have helps me a lot with the accounting problem with the new release company management software, and we definitely saved lots of money from the software their provides. The training of using this software is so simple. it's so easy to use.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- 第二頁 -->
+
+            </div>
+            <!--上一頁 下一頁 按鈕-->
+            <div class="control-btn">
+                <a href="#slideshow" class="left carousel-control" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+                <a href="#slideshow" class="right carousel-control" data-slide="next"><span class="glyphicon glyphicon-chevron-right" ></span></a>
+            </div>
 
         </div>
-        <div class="row user-review">
-            <div class="col-sm-2 col-sm-offset-2">
-                <img class="img-responsive img-circle" src="img/user-review-photo-Gustavo-Fring.jpg" alt="">
-            </div>
-            <div class="col-sm-6">
-                <h3 class="title">Owner of Los Pollos Hermanos</h3>
-                <h4 class="name">Gustavo Fring</h4>
-                <p>On an everyday basis, They have helps me a lot with the accounting problem with the new release company management software, and we definitely saved lots of money from the software their provides. The training of using this software is so simple. it's so easy to use.</p>
-            </div>
+        <!--輪播結尾-->
 
-        </div>
+
     </section>
     <!-- footer -->
     <footer id="footer">
@@ -192,24 +243,30 @@
 
         <h4><a href="" class="email">service@brand.com</a></h4>
         <p class="address">100 Sun Ave NE, Albuquerque, New Mexico 87109</p>
+        <div class="social-links">
+            <a href="#"><i class="fa fa-2x fa-facebook" aria-hidden="true"></i></a>
+            <a href="#"><i class="fa fa-2x fa-twitter" aria-hidden="true"></i></a>
+            <a href="#"><i class="fa fa-2x fa-linkedin" aria-hidden="true"></i></a>
+        </div>
 
-        <a href="#"><i class="fa fa-2x fa-facebook" aria-hidden="true"></i></a>
-        <a href="#"><i class="fa fa-2x fa-twitter" aria-hidden="true"></i></a>
-        <a href="#"><i class="fa fa-2x fa-linkedin" aria-hidden="true"></i></a>
 
 
         <div class="footer-bar">
+            <div class="container">
+                <ul>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Join us</a></li>
+                    <li><a href="#">Press</a></li>
+                    <li><a href="#">Policy</a></li>
+                </ul>
+                <p class="copy-right">&copy; 2017 Brand
+                    <p>
+            </div>
 
-            <ul>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">Join us</a></li>
-                <li><a href="#">Press</a></li>
-                <li><a href="#">Policy</a></li>
-            </ul>
-            <p class="copy-right">&copy; 2017 Brand
-                <p>
         </div>
     </footer>
+
+    <a href="#header" id="scrollTopBtn">Go Back</a>
 </body>
 
 </html>
